@@ -22,7 +22,7 @@
 
         .gallery > img:hover {
             cursor: pointer;
-            
+
         }
 
         .galleryWrapper__screen {
@@ -72,8 +72,17 @@
     ?>
 
     <?php foreach ($maxPhoto as $picture) : ?>
-        <img width="284" height="178" src="img/photo/max/<?= $picture ?>"
-             data-full_image_url="img/photo/max/<?= $picture ?>">
+        <?php
+            $file = fopen(
+                'img/photo/max/',
+                'r'
+            );
+            if (!$file) {
+                echo "file not found!";
+            }
+            ?>
+                <img width="284" height="178" src="img/photo/max/<?= $picture ?>"
+                     data-full_image_url="img/photo/max/<?= $picture ?>">
     <?php endforeach ?>
 
 </div>
