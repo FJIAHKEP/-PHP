@@ -1,6 +1,6 @@
-select * from `cards`;
+select * from users;
 
-insert into `cards` (`img`, `name`)
-values
-('/http1', 'img1'),
-('/http2', 'img2')
+-- insert into `users` (`first_name`, `last_name`, `age`)
+-- values 
+-- ('Dima', 'Pomazkov', '24'),
+-- ('Sasha', 'Pomazkov', '25')
